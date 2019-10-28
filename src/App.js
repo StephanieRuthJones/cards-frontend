@@ -23,14 +23,11 @@ class App extends React.Component {
         <img src="https://gocode.academy/wp-content/uploads/2018/06/javascript-logo.png" alt="javascript-logo" className="javascript-logo" />
         <h2>Question {card.id}: </h2>
         <p>{card.prompt}</p>
-        <button onClick={this.showAnswer}>Show Answer</button>
-        {this.state.showAnswer ?
-          <div>
-            <h2>Answer:</h2>
-            <p>{card.response}</p>
-          </div>
-          : null
-        }
+
+        <h2>Answer:</h2>
+        <p>{card.response}</p>
+
+
       </div>
     })
   }
