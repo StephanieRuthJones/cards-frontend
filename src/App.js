@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
 
+import Card from './components/Card'
+import CardContainer from './components/CardContainer';
+
 class App extends React.Component {
   state = {
-    cards: [],
-    showAnswer: false
+    cards: []
   }
 
   componentDidMount() {
@@ -13,34 +15,17 @@ class App extends React.Component {
       .then(cards => this.setState({ cards }))
   }
 
-  showAnswer = () => {
-    this.setState({ showAnswer: !this.state.showAnswer })
-  }
 
   createCards = () => {
     return this.state.cards.map(card => {
-      return <div className="card" key={card.id}>
-        <img src="https://gocode.academy/wp-content/uploads/2018/06/javascript-logo.png" alt="javascript-logo" className="javascript-logo" />
-        <h2>Question {card.id}: </h2>
-        <p>{card.prompt}</p>
-        <button onClick={this.showAnswer}>Show Answer</button>
-        {this.state.showAnswer ?
-          <div>
-            <h2>Answer:</h2>
-            <p>{card.response}</p>
-          </div>
-          : null
-        }
-      </div>
+      return <Card key={card.id} card={card} />
     })
   }
 
   render() {
-    console.log(this.state.showAnswer)
     return (
-
-      <div className="card-container">
-        {this.createCards()}
+      <div>
+        <CardContainer cards={this.state.cards} />
       </div>
 
     )
