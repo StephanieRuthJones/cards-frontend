@@ -1,22 +1,52 @@
-.App {
+
+.card-container {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* color: white; */
+}
+.card {
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 4px; 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+}
+h2 {
+  text-align: center;
+  background-color: rgba(45, 45, 45, 0.1);
+  padding: 10px;
+  font-size: 30px;
+}
+p {
+  padding: 30px;
+  font-size: 30px;
 }
 
-.App-link {
-  color: #09d3ac;
+button {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
 }
+/* 
+.card-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.card {
+  width: 75%;
+  margin: 20px auto;
+  padding: 30px;
+  background: black;
+  box-shadow: 5px 5px 5px 5px #DFDCE3 ;
+}
+
+img {
+  height: 50%;
+  width: 50%;
+  /* box-shadow: 5px 5px 5px 5px #DFDCE3 ; }*/
+ 
