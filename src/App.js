@@ -27,7 +27,6 @@ class App extends React.Component {
       <div>
         <CardContainer cards={this.state.cards} />
       </div>
-
     )
   }
 }
