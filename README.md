@@ -40,15 +40,16 @@
 
 **PART II: Refactor**
 
-1. Create a components folder
+1. Create a components directory in the src directory
 
-2. Create a Card component. Take code from App and put into Card component.
+2. Create a CardContainer.js file in the components directory.
 
-3. Refactor createCards function to pass necessary props to Card component.
+3. Create a stateful CardContainer component in the new js file. Import / export in the appropriate places. 
 
-4. Create CardContainer component.
+4. Move App state to CardContainer, including fetch and setState. Ensure UI looks the same as before refactor.
 
-5. Take code from App and put it in the container component. Include the createCards function and holds cards data in state.
+5. Create a stateful Card component. Take appropriate code from CardContainer and put into Card component. Import /export in the appropriate places. Pass props from CardContainer to Card component.
 
+***CHALLENGE: Add a button to the card under the question that conditionally renders the "Answer" portion of card using a boolean, "showAnswer" in Card component state and a function that sets state based on a button click.***
 
 [EOF]
