@@ -19,10 +19,10 @@
 ```javascript
 <div className="card" key={card.id}>
     <img src="https://gocode.academy/wp-content/uploads/2018/06/javascript-logo.png" alt="javascript-logo" className="javascript-logo" />
-    <h2>Question # \*card id number goes here\*: </h2>
-    <p>\*question goes here\*</p>
+    <h2>Question # card id number goes here: </h2>
+    <p>question prompt goes here</p>
     <h2>Answer:</h2>
-    <p>\*correct response goes here\*</p>
+    <p>correct response goes here</p>
 </div>
 ```
 
