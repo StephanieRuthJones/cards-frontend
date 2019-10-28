@@ -1,68 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Practice React App
 
-## Available Scripts
+**PART I: Red to Green**
 
-In the project directory, you can run:
+1. In console, cd into cards-frontend project and run "npm install" in command line
 
-### `yarn start`
+2. Refactor App component into class component, then initialize state with "cards" as a key set to an empty array.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+***Why do we need to change the App component from a functional to a class component?***
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+3. Fetch data from:  <https://mighty-wildwood-67431.herokuapp.com/cards>
 
-### `yarn test`
+4. Set state with data from fetch
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+***Look up setState() method. What does it do?***
 
-### `yarn build`
+5. Create a function called createCards that iterates over the cards array in state and creates a card for each card object.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```javascript
+<div className="card" key={card.id}>
+    <img src="https://gocode.academy/wp-content/uploads/2018/06/javascript-logo.png" alt="javascript-logo" className="javascript-logo" />
+    <h2>Question # \*card id number goes here\*: </h2>
+    <p>\*question goes here\*</p>
+    <h2>Answer:</h2>
+    <p>\*correct response goes here\*</p>
+</div>
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+***Why do we use curly braces to reference "card.id"?***
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6. Call function in return() method
 
-### `yarn eject`
+```javascript
+<div className="card-container">
+    {this.createCards()}
+</div>
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+***Why do we need the "this" keyword before calling the createCards() function?***
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**PART II: Refactor**
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Create a components folder
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. Create a Card component. Take code from App and put into Card component.
 
-## Learn More
+3. Refactor createCards function to pass necessary props to Card component.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Create CardContainer component.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Take code from App and put it in the container component. Include the createCards function and holds cards data in state.
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[EOF]
